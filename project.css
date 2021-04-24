@@ -1,0 +1,159 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image: url("back5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+    font-family: 'Zen Dots', cursive;
+    color:white;
+    margin: 0px;
+}
+.comment{
+    font-family: 'Zen Dots';
+    color:rgb(227, 244, 245);
+    background-color: rgba(82, 79, 79, 0.582);
+    margin-left: 400px;
+    padding: 15px;
+    width: 300px;
+    margin-top: 50px;
+    font-style: italic;
+    font-size: 18px;
+}
+.inputData, .taskRecord, .disign, .fontFamily, .backColor{
+    background-color: rgba(61, 91, 117,.23);
+    margin: 10px 500px;
+    border: 2px solid white;
+    padding: 25px;
+    font-size: 20px;
+    width: 500px;
+}
+.inputData{
+    margin-bottom: 150px;
+}
+ h3{
+     margin-left: 500px;
+    border: 2px solid white;
+    width: 150px;
+    padding: 25px;
+
+ }
+.output .taskRecord{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-shadow: aqua;
+}
+.inputData input{
+    border: 0px groove rgba(14, 12, 12, .4);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(39, 35, 35, 0.4);
+    color:white;
+}
+.inputData input:focus{
+    background-color: rgba(240, 227, 227, 0.4);
+}
+label, input, button{
+    display: block;
+    margin: 20px;
+    
+
+}
+button:hover
+{
+    transform: translate(-10px,12px);
+}
+.inputData .Done{
+    color: white;
+    background-color: rgba(23, 0, 128, .5);
+    padding: 10px;
+    border: 1px solid rgb(23, 0, 128);
+    border-radius: 20px;
+    margin-left: 40%;
+    width: 150px;
+
+}
+.inputData .Done:hover{
+    color: rgb(23, 0, 128);
+    background-color: rgba(255, 255, 255, 0.787);
+}
+.disign .control{
+    width: 100px;
+    height: 20px;
+}
+.disign input{
+    display: inline;
+}
+.disign .changeD{
+    width: 200px;
+    height: 100px;
+    display: inline;
+    border: 3px solid black;
+}
+.disign .changeD img{
+    width: 200px;
+    height: 100px;
+}
+.fontFamily
+{
+    scroll-behavior: initial
+}
+.fontFamily p{
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    border-radius: 100%;
+    background-color: rgba(100, 148, 237, 0.26);
+}
+.fontFamily p:hover{
+    background-color: rgba(119, 205, 211, 0.63);
+
+}
+.backColor .changeD{
+    width: 50px;
+    height: 50px;
+    display: inline;
+    border: 0px;
+    border-radius: 10%;
+    cursor: pointer;
+}
+input{
+    padding: 4px;
+    font-size: large;
+}
+/*responsive*/
+@media (max-width:550px) {
+    .inputData, .taskRecord, .disign, .fontFamily, .backColor, .comment{
+        margin: 30px;
+        width: 400px;
+    }
+    .inputData .Done{
+    margin-left: 20%;
+
+    }
+    .disign .changeD img,.disign .changeD{
+        width:150px
+    }
+    
+}
+
+@media (max-width:450px) {
+    .inputData, .taskRecord, .disign, .fontFamily, .backColor, .comment{
+        margin: 20px;
+        width: 300px;
+    }
+    .inputData .Done{
+    margin-left: 20%;
+
+    }
+    .disign .changeD img,.disign .changeD{
+        width:250px
+    }
+    
+}

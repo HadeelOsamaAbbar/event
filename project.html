@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       
+       <title>List Events</title>
+       <link rel="stylesheet" href="project.css" >
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+   </head>
+<body class="back" :style="{background:back, height:100%, width:100%}">
+    <section id="task" class="font back":style="{fontFamily: fontList}">
+        <p class="comment"><b>If you want change style, Scroll down ^-^</b></p>
+        <div class="inputData all color":style="{fontSize:fontsize + 'px'
+        , color:Fcolor}" >
+            <h2>List Events:</h2>
+            <label>Name<small style="color:red">*</small>:</label>
+            <input type="text" placeholder="Enter your name" v-model="name" required>
+            <label>Event Name<small style="color:red">*</small>:</label>
+            <input type="text" placeholder="Enter name of event" v-model="task" required>
+            <label>Time<small style="color:red">*</small>:</label>
+            <input type="datetime-local" value="2021-01-01T00:00" v-model="dateNow" :min="dateNow"max="2022-01-01T00:00"
+             name="Event date" placeholder="Enter the time"  required>
+             <button class="Done" v-on:click="printTask()"@click="warn=1">Done</button>
+             <p v-if="checkInput() == false && warn==1" style="color:red">Your Name , Event name or Time can't be Empty</p>
+        </div>
+    
+        <div class="output " :style="{fontSize:fontsize + 'px', color:Fcolor}">
+            <h3 v-if="c==1" class="color">Events:</h3>
+                <p class="taskRecord color"  v-for="L in list">
+                     Name of user is <b>{{L.name}}</b>
+                    <br>Event Name is <b>{{L.task}}</b><br>
+                    Time for Event: <b>{{L.time}}</b><br>
+                </p>
+        </div>
+
+        <div class="disign color" :style="{fontSize:fontsize + 'px', color:Fcolor}">
+            <h4>To change background:</h4>
+            <button class="changeD" v-for="Back in back" @click= "changeBack(Back)">
+                 <img :src="Back"></button>
+            
+        </div>
+        <div class="disign color" :style="{fontSize:fontsize + 'px', color:Fcolor}">
+            <h4>To change font size:</h4>
+            <input type="number" class="control" min="5" max="100" v-model="fontsize">
+            <input type="range" name="size" min="5" max="100" v-model="fontsize" step="1">
+        </div>
+
+        <div class="fontFamily color" :style="{fontSize:fontsize + 'px', color:Fcolor}">
+            <h4>To change font family:</h4>
+            <p  class="list-group-item"
+            v-for="font in fontList" @click= "changeFont(font)" >{{font}}</p>
+   
+        </div>
+        <div class="backColor color":style="{fontSize:fontsize + 'px', color:Fcolor}">
+            <h4>To change background Color:</h4>
+            <button class="changeD" v-for="Bcolor in Color" :style="{background:Bcolor}"
+             @click= "changeBackColor(Bcolor)">
+                </button>
+        </div>
+        <div class="backColor color":style="{fontSize:fontsize + 'px', color:Fcolor}">
+            <h4>To change Color:</h4>
+            <label>color:</label><input type="text" value="write color name" class="control" v-model="Fcolor">
+            
+        </div>
+        </section>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="project.js"></script>
+</body>
+</html>

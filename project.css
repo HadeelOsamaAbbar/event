@@ -131,6 +131,7 @@ input{
 @media (max-width:550px) {
     .inputData, .taskRecord, .disign, .fontFamily, .backColor, .comment{
         margin: 30px;
+        float: left;
         width: 400px;
     }
     .inputData .Done{
